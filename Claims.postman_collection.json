@@ -1,0 +1,77 @@
+{
+	"info": {
+		"_postman_id": "f2032813-aabd-4bdb-94f9-d1e39fd33337",
+		"name": "Claims",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39377569"
+	},
+	"item": [
+		{
+			"name": "https://us-central1-rising-coil-440119-j0.cloudfunctions.net/function-documents-ms",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/ronaldsarmiento/Downloads/Architecture-delivery3.png"
+						},
+						{
+							"key": "uploadedBy",
+							"value": "ronaldsg20",
+							"type": "text"
+						},
+						{
+							"key": "claimId",
+							"value": "testClaimid",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://us-central1-rising-coil-440119-j0.cloudfunctions.net/function-documents-ms",
+					"protocol": "https",
+					"host": [
+						"us-central1-rising-coil-440119-j0",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"function-documents-ms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://create-claim-144817721968.us-east4.run.app",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"abc-123456\",\n    \"description\": \"This is a test claim\",\n    \"userId\": \"testUserId\",\n    \"productId\": \"testProductId\",\n    \"incidentDate\": \"2012-04-23T18:25:43.511Z\",\n    \"creationDate\": \"2012-04-23T18:25:43.511Z\",\n    \"veredict\": \"NOT_DEFINED\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://create-claim-144817721968.us-east4.run.app",
+					"protocol": "https",
+					"host": [
+						"create-claim-144817721968",
+						"us-east4",
+						"run",
+						"app"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
